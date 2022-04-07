@@ -1,2 +1,51 @@
 .Card {
+	min-height: 300px;
+	border: 1px solid #000;
+	border-radius: 4px;
+}
+
+.Card__top {
+	height: 200px;
+}
+
+.Card__img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.Card__name {
+}
+
+.Card__nameLatin {
+}
+
+.Card__animalType {
+}
+
+.Card__activeTime {
+}
+
+.Card__lengthMin {
+}
+
+.Card__lengthMax {
+}
+
+.Card__weightMin {
+}
+
+.Card__weightMax {
+}
+
+.Card__lifespan {
+}
+
+.Card__habitat {
+}
+
+.Card__diet {
+}
+
+.Card__geoRange {
 }
