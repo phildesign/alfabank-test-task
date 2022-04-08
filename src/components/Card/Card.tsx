@@ -23,18 +23,42 @@ const Card = ({
 				<img src={image_link} alt={name} className={styles.Card__img} />
 			</div>
 			<div className={styles.Card__main}>
-				<div className={styles.Card__name}>Name: {name}</div>
-				<div className={styles.Card__nameLatin}>Latin name: {latin_name}</div>
-				<div className={styles.Card__animalType}>Animal type: {animal_type}</div>
-				<div className={styles.Card__activeTime}>Active time: {active_time}</div>
-				<div className={styles.Card__lengthMin}>Length min: {length_min}</div>
-				<div className={styles.Card__lengthMax}>Length max: {length_max}</div>
-				<div className={styles.Card__weightMin}>Weight min: {weight_min}</div>
-				<div className={styles.Card__weightMax}>Weight max: {weight_max}</div>
-				<div className={styles.Card__lifespan}>Lifespan: {lifespan}</div>
-				<div className={styles.Card__habitat}>Habitat: {habitat}</div>
-				<div className={styles.Card__diet}>Diet: {diet}</div>
-				<div className={styles.Card__geoRange}>Geo range: {geo_range}</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Name:</span> {name}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Latin name:</span> {latin_name}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Animal type:</span> {animal_type}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Active time:</span> {active_time}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Length min:</span> {length_min}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Length max:</span> {length_max}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Weight min:</span> {weight_min}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Weight max:</span> {weight_max}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Lifespan:</span> {lifespan}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Habitat:</span> {habitat}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Diet:</span> {diet}
+				</div>
+				<div className={styles.Card__info}>
+					<span className={styles.Card__infoName}>Geo range:</span> {geo_range}
+				</div>
 			</div>
 		</div>
 	);
