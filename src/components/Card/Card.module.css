@@ -2,6 +2,11 @@
 	min-height: 300px;
 	border: 1px solid #000;
 	border-radius: 4px;
+	transition: 0.5s;
+}
+
+.Card:hover {
+	box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .Card__top {
@@ -54,9 +59,11 @@
 .Card__icon_like {
 	fill: #fff;
 	stroke: #000;
+	width: 37px;
+	height: 24px;
 }
 
-.Card__icon_like.isActive {
+.Card__btn.isActive .Card__icon_like {
 	fill: #ea4335;
 	stroke: #ea4335;
 }

@@ -1,5 +1,7 @@
-import { CardItem } from './../../interfaces/card.interface';
+import { CardItemWithLike } from './../../interfaces/card.interface';
 
 export interface CardProps {
-	card: CardItem[];
+	data: CardItemWithLike;
+	handleUpdateLike: (id: number) => void;
+	handleDeleteCard: (id: number) => void;
 }

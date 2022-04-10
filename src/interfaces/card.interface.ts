@@ -1,7 +1,7 @@
 export interface CardModel {
 	loading: boolean;
 	hasErrors: boolean;
-	data: CardItem[];
+	data: CardItemWithLike[];
 }
 
 export interface CardItem {
@@ -19,4 +19,9 @@ export interface CardItem {
 	geo_range: string;
 	image_link: string;
 	id: number;
+}
+
+export interface CardItemWithLike {
+	card: CardItem;
+	like: boolean;
 }
