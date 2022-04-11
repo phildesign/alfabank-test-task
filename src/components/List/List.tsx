@@ -39,7 +39,7 @@ const List = (): JSX.Element => {
 		<div className={styles.List}>
 			<div className={styles.List__top}>
 				<button className={styles.List__btnLiked} onClick={() => setIsLiked(!isLiked)}>
-					Show only liked cards
+					{!isLiked ? <>Show only liked cards</> : <>Show all cards </>}
 				</button>
 			</div>
 			<div className={styles.List__box}>{loading ? <>Loading...</> : <>{cardList}</>}</div>
