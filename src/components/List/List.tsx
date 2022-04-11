@@ -5,7 +5,7 @@ import { cardSelector, deleteCard, fetchData, updateLike } from '../../redux/sli
 import styles from './List.module.css';
 
 const List = (): JSX.Element => {
-	const { data } = useAppSelector(cardSelector);
+	const { data, loading } = useAppSelector(cardSelector);
 	const dispatch = useAppDispatch();
 
 	const [isLiked, setIsLiked] = useState<boolean>(false);
@@ -26,13 +26,12 @@ const List = (): JSX.Element => {
 		.filter((item) => (isLiked ? item.like : true))
 		.map((item) => {
 			return (
-				<>
-					<Card
-						data={item}
-						handleUpdateLike={handleUpdateLike}
-						handleDeleteCard={handleDeleteCard}
-					/>
-				</>
+				<Card
+					data={item}
+					handleUpdateLike={handleUpdateLike}
+					handleDeleteCard={handleDeleteCard}
+					key={item.card.id}
+				/>
 			);
 		});
 
@@ -43,7 +42,7 @@ const List = (): JSX.Element => {
 					Show only liked cards
 				</button>
 			</div>
-			<div className={styles.List__box}>{cardList}</div>
+			<div className={styles.List__box}>{loading ? <>Loading...</> : <>{cardList}</>}</div>
 		</div>
 	);
 };
