@@ -21,3 +21,17 @@
 ### В каком формате сдавать ?
 
 Ссылка на GitHub + проект выложенный на GitHub Pages
+
+---
+
+[<img src="./project.jpg">]()
+
+### Stack:
+
+- React
+- Redux Toolkit
+- TypeScript
+- CSS Modules
+- classnames
+
+Ссылка на GitHub Pages - https://phildesign.github.io/alfabank-test-task/
