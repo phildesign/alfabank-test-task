@@ -1,13 +1,22 @@
 import React from 'react';
-import styles from './Card.module.css';
 import cn from 'classnames';
 import { CardProps } from './Card.props';
 
-const Card: React.FC<CardProps> = ({
+import styles from './Card.module.css';
+
+const Card = ({
 	data: { card, like },
 	handleUpdateLike,
 	handleDeleteCard,
-}) => {
+}: CardProps): JSX.Element => {
+	const handleUpdateLikeClick = () => {
+		handleUpdateLike(card.id);
+	};
+
+	const handleDeleteCardClick = () => {
+		handleDeleteCard(card.id);
+	};
+
 	return (
 		<div className={styles.Card}>
 			<div className={styles.Card__top}>
@@ -56,9 +65,7 @@ const Card: React.FC<CardProps> = ({
 					className={cn(styles.Card__btn, {
 						[styles.isActive]: like,
 					})}
-					onClick={() => {
-						handleUpdateLike(card.id);
-					}}>
+					onClick={handleUpdateLikeClick}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -73,7 +80,7 @@ const Card: React.FC<CardProps> = ({
 						/>
 					</svg>
 				</button>
-				<button className={styles.Card__btn} onClick={() => handleDeleteCard(card.id)}>
+				<button className={styles.Card__btn} onClick={handleDeleteCardClick}>
 					<svg
 						viewBox="0 0 1024 1024"
 						xmlns="http://www.w3.org/2000/svg"
